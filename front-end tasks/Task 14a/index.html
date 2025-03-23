@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Information UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            width: 150px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .green-btn {
+            background-color: lightgreen;
+        }
+        .red-btn {
+            background-color: lightcoral;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h2>Student Information</h2>
+
+    <input type="text" id="studentName" placeholder="Enter Name">
+    <input type="number" id="studentAge" placeholder="Enter Age">
+    <input type="number" id="studentGrade" placeholder="Enter Grade">
+    <input type="text" id="studentCourse" placeholder="Enter Course">
+    <br><br>
+
+    <button class="green-btn" onclick="storeStudentData()">Insert Info</button>
+    <button class="red-btn" onclick="clearInputs()">Clear Inputs</button>
+    <br>
+    <button class="green-btn" onclick="displayStudentData()">Show All</button>
+    <button class="red-btn" onclick="clearDisplay()">Clear Display</button>
+
+    <h3>Search Student</h3>
+    <input type="text" id="searchInput" placeholder="Search by Name or Course">
+    <button class="green-btn" onclick="searchStudent()">Search</button>
+    
+    <p id="infoDisplay"></p>
+
+    <script src="script.js">
+        
+    </script>
+
+</body>
+</html>
