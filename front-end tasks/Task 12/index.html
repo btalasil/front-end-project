@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum with Colors</title>
+</head>
+<body>
+    <!-- Inputs for sum calculation -->
+    <input id="input_a" placeholder="Enter a" type="number"/>
+    <input id="input_b" placeholder="Enter b" type="number"/>
+    <button onclick="calculate()">Calculate Sum</button>
+    <div id="sum_div"></div>
+
+    <script>
+        
+        const colors = ["red", "green", "blue", "orange"];
+        let idx = 0;
+
+        function calculate() {
+            let a = parseInt(document.getElementById("input_a").value);
+            let b = parseInt(document.getElementById("input_b").value);
+            let sum = 0;
+
+        
+            
+
+    
+            for (let i = a; i <= b; i++) {
+                sum += i;
+            }
+
+            document.getElementById("sum_div").innerHTML = sum;
+            document.getElementById("sum_div").style.color = colors[idx];
+
+            
+            idx = (idx + 1) % colors.length;
+        }
+    </script>
+
+</body>
+</html>

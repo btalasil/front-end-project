@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <input placeholder="Enter a number" id="numInput" onkeyup="generateStars()" />
+        <div id="output"></div>
+        
+        <script>
+            function generateStars() {
+                let result = "";
+                let value = parseInt(document.getElementById("numInput").value);
+                
+
+                for (let row = 1; row <= value; row++) {
+                    let starRow = "";
+                    for (let star = 1; star <= row; star++) {
+                        starRow += "* ";
+                    }
+                    result += starRow + "<br>";
+                }
+                
+                document.getElementById('output').innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
